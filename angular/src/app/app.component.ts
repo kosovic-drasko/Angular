@@ -20,9 +20,9 @@ this.podaci();
 
      let temp_max = res
      console.log(temp_max);
-     // let temp_min = res['list'].map(res => res.main.temp_min)
+     let temp_min = res.map((res: { title: any; }) => res.title)
      // let alldates = res['list'].map(res => res.dt)
-
+console.log(temp_min);
    })
   };
 
