@@ -1,11 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProbaService } from './proba.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  constructor(private servisProba:ProbaService) {
+  }
+  ngOnInit(): void {
+this.podaci();
+  }
+
+  podaci(){
+ this.servisProba.dailyForecast()
+   .subscribe(res => {
+
+     let temp_max = res
+     console.log(temp_max);
+     // let temp_min = res['list'].map(res => res.main.temp_min)
+     // let alldates = res['list'].map(res => res.dt)
+
+   })
+  };
+
   public barChartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
