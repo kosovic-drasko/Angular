@@ -21,19 +21,19 @@ this.podaci();
 
      let temp_max = res
      console.log(temp_max);
-     let naslov = res.map((res: { title: any; }) => res.title)
-     let id = res.map((res: { id: any; }) => res.id)
+     let region = res.map((res: { region: any; }) => res.region)
+     let prodaja = res.map((res: { prodaja: any; }) => res.prodaja)
      // let alldates = res['list'].map(res => res.dt)
-console.log(naslov);
+console.log(region);
      this.chart = new Chart('canvas', {
-       type: 'line',
+       type: 'bar',
        data: {
-         labels: naslov,
+         labels: region,
          datasets: [
            {
-             data: id,
+             data: prodaja,
              borderColor: '#3cba9f',
-             fill: true
+             // fill: true
            },
          ]
        }
@@ -46,7 +46,8 @@ console.log(naslov);
            },
            yAxes: {
              display: true
-           }
+           },
+
          }
        }
      })

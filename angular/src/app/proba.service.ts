@@ -12,9 +12,10 @@ export class ProbaService {
 
   constructor(private _http: HttpClient) {
 }
+
 dailyForecast(){
 
-  return this._http.get("https://jsonplaceholder.typicode.com/albums").pipe(map((result: any) => result));
+  return this._http.get('http://localhost:8080/grafikon').pipe(map((result: any) => result));
 
 }
 }
