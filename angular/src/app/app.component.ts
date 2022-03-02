@@ -23,7 +23,7 @@ this.podaci();
      console.log(temp_max);
      let region = res.map((res: { region: any; }) => res.region)
      let prodaja = res.map((res: { prodaja: any; }) => res.prodaja)
-     // let alldates = res['list'].map(res => res.dt)
+  
 console.log(region);
      this.chart = new Chart('canvas', {
        type: 'bar',
