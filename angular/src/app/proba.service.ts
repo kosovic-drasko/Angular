@@ -18,5 +18,6 @@ dailyForecast(){
   return this._http.get('http://localhost:8080/grafikon').pipe(map((result: any) => result));
 
 }
+
 }
 

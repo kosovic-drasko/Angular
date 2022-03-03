@@ -23,7 +23,7 @@ this.podaci();
      console.log(temp_max);
      let region = res.map((res: { region: any; }) => res.region)
      let prodaja = res.map((res: { prodaja: any; }) => res.prodaja)
-  
+
 console.log(region);
      this.chart = new Chart('canvas', {
        type: 'bar',
@@ -32,28 +32,27 @@ console.log(region);
          datasets: [
            {
              data: prodaja,
+             backgroundColor:["red","yellow","blue"],
              borderColor: '#3cba9f',
              // fill: true
            },
          ]
        }
-       ,
-       options: {
 
-         scales: {
-           xAxes: {
-             display: true
-           },
-           yAxes: {
-             display: true
-           },
-
-         }
-       }
      })
 
    })
   }
+
+  print() {
+    this.chart.instance.print();
+  }
+
+  export() {
+    this.chart.instance.exportTo('Example', 'png');
+  }
+
+
 }
 
 
