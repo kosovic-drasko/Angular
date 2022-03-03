@@ -26,7 +26,8 @@ this.podaci();
 
 console.log(region);
      this.chart = new Chart('canvas', {
-       type: 'bar',
+       // type: 'bar',
+       type: 'pie',
        data: {
          labels: region,
          datasets: [
