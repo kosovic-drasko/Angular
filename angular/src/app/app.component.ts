@@ -25,9 +25,29 @@ this.podaci();
      let prodaja = res.map((res: { prodaja: any; }) => res.prodaja)
 
 console.log(region);
+
      this.chart = new Chart('canvas', {
        // type: 'bar',
+
        type: 'pie',
+       options:{
+         // horizontalna varijanta
+         indexAxis:'y',
+plugins:{
+  legend:{
+    display:true,
+    labels:{
+      color:'rgb (255, 99, 132)'
+    }
+  }
+},
+         scales: {
+           y: {
+             beginAtZero: true
+           }
+         }
+       },
+
        data: {
          labels: region,
          datasets: [
@@ -35,10 +55,11 @@ console.log(region);
              data: prodaja,
              backgroundColor:["red","yellow","blue"],
              borderColor: '#3cba9f',
-             // fill: true
+             borderWidth: 1
            },
          ]
        }
+
 
      })
 
@@ -53,6 +74,11 @@ console.log(region);
     this.chart.instance.exportTo('Example', 'png');
   }
 
+
+  myFunction() {
+
+      alert("I am an alert box!");
+    }
 
 }
 
