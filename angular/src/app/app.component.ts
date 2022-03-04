@@ -66,9 +66,7 @@ plugins:{
    })
   }
 
-  print() {
-    this.chart.instance.print();
-  }
+ 
 
   export() {
     this.chart.instance.exportTo('Example', 'png');
@@ -78,6 +76,9 @@ plugins:{
   myFunction() {
 
       alert("I am an alert box!");
+    }
+   print(){
+    window.print();
     }
 
 }
