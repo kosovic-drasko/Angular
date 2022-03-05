@@ -13,3 +13,11 @@
   border: solid 3px rgba(75, 192, 192, 1);
   background: white;
 }
+@media print {
+  /* styling goes here */
+  .example {
+    display: none;
+  }
+}
+
+

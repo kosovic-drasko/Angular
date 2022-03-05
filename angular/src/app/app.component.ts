@@ -66,7 +66,7 @@ plugins:{
    })
   }
 
- 
+
 
   export() {
     this.chart.instance.exportTo('Example', 'png');
